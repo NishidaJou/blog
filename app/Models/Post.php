@@ -26,3 +26,4 @@ class Post extends Model
     
 }
 
+
