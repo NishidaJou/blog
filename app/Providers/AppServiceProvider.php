@@ -12,18 +12,14 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function register(): void
     {
-        paginator::useBootstrap();    //動画
         //
     }
-
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
+    public function boot(): void
+    {
+    \URL::forceScheme('https');
+    }
     
-        //
-
+    
 }

@@ -21,6 +21,13 @@
             <button type="button" onclick="deletePost({{ $post->id }})">delete</button> 
             </form>
             </div>
+        @foreach($questions as $question)
+            <div>{{ $question['title'] }}</div>
+            <div>
+                <a href="https://teratail.com/questions/{{ $question['id'] }}">
+                    {{ $question['title'] }}
+                </a>
+            </div>
         @endforeach
     </div>
         <div class='paginate'>{{ $posts->links() }}</div>
